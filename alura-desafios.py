@@ -1,16 +1,12 @@
-class Musica:
+class Restaurante:
     nome = ''
-    artista = ''
-    duracao = float
+    categoria = ''
+    ativo = False
 
-musica_gospel = Musica()
-musica_gospel.nome = 'Quero Exaltar'
-musica_gospel.artista = 'Lorena Oliveira'
-musica_gospel.duracao = 3.35
+restaurante_praca = Restaurante()
+restaurante_praca.nome = 'Praça'
+restaurante_praca.categoria = 'Italiana'
 
-musica_trap = Musica()
-musica_trap.nome = 'Diz ai Qual é o Plano?'
-musica_trap.artista = 'MC Ig'
-musica_trap.duracao = 11.43
+verificacao = 'Está ativo' if restaurante_praca.ativo == True else 'Está inativo'
+print(verificacao)
 
-print(vars(musica_gospel), vars(musica_trap))
