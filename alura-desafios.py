@@ -1,7 +1,16 @@
-def numero():
-    solicite = int(input('Digite um número: '))
-    if (solicite %2 == 0):
-        print('Esse número é par')
+def idade():
+    solicite = int(input('Digite a sua idade: '))
+    # condicionais
+    crianca = solicite <= 12
+    adolescente = 13 <= solicite <= 18
+    adulto = 18 <= solicite <= 59
+
+    if (crianca):
+        print('Você é uma criança')
+    elif (adolescente):
+        print('Você é um(a) adolescente')
+    elif (adulto):
+        print('Você é um adulto')
     else:
-        print('Esse número é impar')
-numero()
+        print('Você é um(a) idoso(a)')
+idade()
