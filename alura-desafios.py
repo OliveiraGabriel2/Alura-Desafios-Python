@@ -1,16 +1,17 @@
-def idade():
-    solicite = int(input('Digite a sua idade: '))
+def login():
+    user = (input('Digite o seu usuário: '))
+    senha = (input('Digite a sua senha: '))
     # condicionais
-    crianca = solicite <= 12
-    adolescente = 13 <= solicite <= 18
-    adulto = 18 <= solicite <= 59
+    user_do_app = user == 'GabrielOliveira22'
+    senha_do_app = senha == 'SenhaTeste123'
 
-    if (crianca):
-        print('Você é uma criança')
-    elif (adolescente):
-        print('Você é um(a) adolescente')
-    elif (adulto):
-        print('Você é um adulto')
+
+    if (user_do_app and senha_do_app):
+        print(f'Seja bem vindo, {user}!')
+    elif (user_do_app and not senha_do_app):
+        print('Senha errada!')
+    elif (senha_do_app and not user_do_app):
+        print('Usuário errado!')
     else:
-        print('Você é um(a) idoso(a)')
-idade()
+        print('Senha ou usuário errado!')
+login()
