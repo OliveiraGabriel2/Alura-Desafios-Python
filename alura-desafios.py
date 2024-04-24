@@ -1,17 +1,20 @@
-def login():
-    user = (input('Digite o seu usuário: '))
-    senha = (input('Digite a sua senha: '))
+def eixo():
+    x = float((input('Digite a coordenada x: ')))
+    y = float((input('Digite a coordenada y: ')))
     # condicionais
-    user_do_app = user == 'GabrielOliveira22'
-    senha_do_app = senha == 'SenhaTeste123'
+    primeiro_quadrante = x > 0 and y > 0
+    segundo_quadrante = x < 0 and y > 0
+    terceiro_quadrante = x < 0 and y < 0
+    quarto_quadrante = x > 0 and y < 0
 
-
-    if (user_do_app and senha_do_app):
-        print(f'Seja bem vindo, {user}!')
-    elif (user_do_app and not senha_do_app):
-        print('Senha errada!')
-    elif (senha_do_app and not user_do_app):
-        print('Usuário errado!')
+    if (primeiro_quadrante):
+        print(f'O ponto está no primeiro quadrante.')
+    elif (segundo_quadrante):
+        print('O ponto está no segundo quadrante.')
+    elif (terceiro_quadrante):
+        print('O ponto está no terceiro quadrante.')
+    elif (quarto_quadrante):
+        print('O ponto está no quarto quadrante.')
     else:
-        print('Senha ou usuário errado!')
-login()
+        print('O ponto está sobre um eixo ou na origem.')
+eixo()
