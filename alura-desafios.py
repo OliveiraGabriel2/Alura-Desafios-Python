@@ -1,6 +1,8 @@
-elementos =  ['Água', 'Fogo', 'Terra', 'Grama']
+numero = 10
 
-def elementos_do_mundo():
-    for elemento in elementos:
-        print(f'Elemeno {elemento}')
-elementos_do_mundo()
+def decrescente():
+    global numero
+    for numero in range(numero, 0, -1):
+        print(f'{numero}')
+
+decrescente()
