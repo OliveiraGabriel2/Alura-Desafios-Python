@@ -1,13 +1,36 @@
-class Restaurante():
-    def __init__(self, nome, categoria, prato_principal, valor_entrada):
+class Pessoa():
+    def __init__(self, nome='', idade=0, profissao=''):
         self.nome = nome
-        self.categoria = categoria
-        self.prato_principal = prato_principal
-        self.valor_entrada = valor_entrada
+        self.idade = idade
+        self.profissao = profissao
 
     def __str__(self):
-        return f'Nome: {self.nome} | Categoria: {self.categoria} | Prato-principal: {self.prato_principal} | Valor da entrada: R${self.valor_entrada} reais'
+        return f'{self.nome}, {self.idade} anos, {self.profissao}'
+    
+    @property
+    def saudacao(self):
+        if (self.profissao):
+            return f'Olá, sou {self.nome}! Trabalho como {self.profissao}'
+        else:
+            return f'Olá, eu sou {self.nome}'
+        
+    def aniversario(self):
+        self.idade += 1
 
-restaurante_gourmet = Restaurante('Vitrini', 'Gourmet', 'Risoto de cogumelos selvagens com trufas', int('30'))
-print(restaurante_gourmet) 
+tiago = Pessoa('Tiago', 25, 'Programador')
+
+print("Informações Iniciais:")
+print(tiago)
+print()
+tiago.aniversario()
+print()
+print(tiago.saudacao)
+
+
+
+   
+
+        
+       
+        
 
