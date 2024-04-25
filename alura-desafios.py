@@ -1,12 +1,12 @@
-class Restaurante:
-    nome = ''
-    categoria = ''
-    ativo = False
+class Carro():
+    def __init__(self, modelo, cor, ano):
+        self.modelo = modelo
+        self.cor = cor
+        self.ano = ano
 
-restaurante_praca = Restaurante()
-restaurante_praca.nome = 'Praça'
-restaurante_praca.categoria = 'Italiana'
+    def __str__(self):
+        return f'{self.modelo} | {self.cor} | {self.ano}'
 
-verificacao = 'Está ativo' if restaurante_praca.ativo == True else 'Está inativo'
-print(verificacao)
+carro_ferrari = Carro('Ferrari', 'Vermelha', '2024')
+print(carro_ferrari)
 
