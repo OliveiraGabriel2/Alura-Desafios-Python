@@ -1,30 +1,26 @@
-class Pessoa():
-    def __init__(self, nome='', idade=0, profissao=''):
-        self.nome = nome
-        self.idade = idade
-        self.profissao = profissao
+class ContaBancaria():
+    def __init__(self, titular='', saldo=0.0):
+        self._titular = titular
+        self._saldo = saldo
+        self._ativo = False
 
     def __str__(self):
-        return f'{self.nome}, {self.idade} anos, {self.profissao}'
+        print(f'{'Nome do Titular'.ljust(25)} | {'Saldo da conta'.ljust(25)} | {'Status'}')
+        return f'{self._titular.ljust(25)} | {str(self._saldo).ljust(25)} | {self.ativar_conta}'
     
+    def alternar_estado(self):
+        self._ativo = not self._ativo
+
     @property
-    def saudacao(self):
-        if (self.profissao):
-            return f'Olá, sou {self.nome}! Trabalho como {self.profissao}'
-        else:
-            return f'Olá, eu sou {self.nome}'
-        
-    def aniversario(self):
-        self.idade += 1
+    def ativar_conta(self):
+        return 'Ativo' if self._ativo else 'Desativado'
 
-tiago = Pessoa('Tiago', 25, 'Programador')
+    
+tiago_conta_bancaria = ContaBancaria('Tiago', 720.0)
+ana_conta_bancaria = ContaBancaria('Tiago', 820.0)
 
-print("Informações Iniciais:")
-print(tiago)
-print()
-tiago.aniversario()
-print()
-print(tiago.saudacao) 
+print(tiago_conta_bancaria)
+
 
 
 
